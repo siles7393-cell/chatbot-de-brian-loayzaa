@@ -34,6 +34,8 @@ def configurar_pagina():
 
 
 def crear_usuario():
+    st.write("Secrets disponibles:", list(st.secrets.keys()))
+
     clave_secreta = st.secrets["CLAVE_API"]
     return groq.Groq(api_key=clave_secreta)
 
@@ -99,3 +101,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+
